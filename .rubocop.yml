@@ -1,0 +1,44 @@
+require: 
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+AllCops:
+  NewCops: enable
+  Exclude:
+    - db/schema.rb
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+
+Bundler/OrderedGems:
+  Exclude:
+    - "Gemfile"
+Metrics/AbcSize:
+  Max: 40
+Metrics/BlockLength:
+  Max: 50
+  Exclude:
+    - "db/schema.rb"
+    - "spec/**/*"
+    - "config/routes.rb"
+Metrics/ClassLength:
+  Max: 230
+Metrics/CyclomaticComplexity:
+  Max: 16
+Metrics/MethodLength:
+  Max: 50
+Metrics/PerceivedComplexity:
+  Max: 19
+Style/Documentation:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Exclude:
+    - "bin/bundle"
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - "db/**/*"
+    - "bin/bundle"
+    - "config/initializers/*"
+Style/YodaCondition:
+  Enabled: false
