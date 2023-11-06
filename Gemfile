@@ -58,6 +58,7 @@ group :development, :test do
   gem 'rubocop-rails'
   gem 'rubocop-performance'
   gem 'rubocop-rspec'
+  gem 'brakeman'
 end
 
 group :development do
